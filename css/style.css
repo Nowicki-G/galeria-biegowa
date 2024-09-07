@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before ::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(rgb(30, 96, 30), rgb(117, 218, 117));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  padding: 65px;
+}
+
+h1 {
+  font-size: 45px;
+  margin: 80px;
+  text-align: center;
+}
+
+.gallery {
+  background: linear-gradient(50deg, rgb(211, 237, 211), rgb(132, 245, 124));
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 10px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(88, 240, 74, 0.25);
+  margin: 50px;
+  max-height: 200px;
+  max-width: 300px;
+  transform: scale(1);
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.thumbnail:hover {
+  transform: scale(1.2);
+}
+
+.thumbnail img {
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.popup {
+  align-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  display: flex;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.popup__arrow {
+  border: none;
+  border-radius: 50%;
+  font-size: 80px;
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  top: 80%;
+  width: 100px;
+}
+
+.popup__close:hover,
+.popup__arrow:hover {
+  opacity: 1;
+}
+.popup__arrow--right {
+  right: 5%;
+}
+
+.popup__arrow--left {
+  left: 5%;
+}
+
+.popup__arrow,
+.popup__close {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup__close {
+  cursor: pointer;
+  border-radius: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 80px;
+  opacity: 0.5;
+  position: fixed;
+  right: 35px;
+  transition: opacity 0.2s;
+  top: 20px;
+}
+
+.popup__img {
+  max-height: 90%;
+  max-width: 90%;
+}
