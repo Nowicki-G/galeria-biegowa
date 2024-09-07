@@ -18,9 +18,12 @@ body {
 }
 
 h1 {
+  display: flex;
+ flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 45px;
-  margin: 80px;
   text-align: center;
+  padding: 15px;
 }
 
 .gallery {
