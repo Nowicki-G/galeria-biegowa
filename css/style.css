@@ -19,8 +19,8 @@ body {
 
 h1 {
   display: flex;
- flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: center;
   font-size: 45px;
   text-align: center;
   padding: 15px;
@@ -89,6 +89,7 @@ h1 {
 .popup__arrow:hover {
   opacity: 1;
 }
+
 .popup__arrow--right {
   right: 5%;
 }
